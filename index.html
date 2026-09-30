@@ -56,7 +56,7 @@ h2{font-size:38px;letter-spacing:-1.2px;margin:6px 0}
 .info a{color:#fff;font-weight:900}
 .formbox{background:#fff;border-radius:18px;padding:28px;box-shadow:0 8px 30px #10182812}
 .formbox input,.formbox select,.formbox textarea{width:100%;padding:13px;margin-bottom:11px;border:1px solid #d0d5dd;border-radius:9px;font:inherit}
-.formbox textarea{min-height:85px;resize:vertical}.formbox button{width:100%;border:0;cursor:pointer}
+.formbox textarea{min-height:85px;resize:vertical}.send-options{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:4px}.send-options button{width:100%;border:0;cursor:pointer;padding:13px 9px;border-radius:10px;font:inherit;font-weight:900}.send-wa{background:#25D366;color:#fff}.send-sms{background:#0b2b55;color:#fff}.send-email{background:#e21b23;color:#fff}.send-note{font-size:12px;color:#667085;margin-top:9px;text-align:center}.formbox button{width:100%;border:0;cursor:pointer}
 .cta{background:var(--red);color:#fff}.cta-row{display:flex;justify-content:space-between;align-items:center;gap:25px}.cta h2{font-size:35px}.cta p{color:#ffe4e5}
 footer{background:#040d1a;color:#aeb8c5;padding:28px 0;font-size:14px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot b{color:#fff}
 .float{position:fixed;right:17px;bottom:17px;background:#25D366;color:#fff;padding:14px 17px;border-radius:999px;font-weight:900;box-shadow:0 8px 25px #0005;z-index:30}
@@ -67,11 +67,11 @@ footer{background:#040d1a;color:#aeb8c5;padding:28px 0;font-size:14px}.foot{disp
 .hero-photo img{width:100%;height:100%;object-fit:cover}
 .photo-badge{position:absolute;left:24px;bottom:22px;background:#e21b23;color:#fff;padding:10px 16px;border-radius:999px;font-weight:900;box-shadow:0 5px 18px #0004}
 .gallery-section{background:#fff}
-.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .gallery-grid figure{margin:0;background:#f5f7fa;border-radius:16px;overflow:hidden;border:1px solid #e4e7ec}
-.gallery-grid img{display:block;width:100%;height:300px;object-fit:cover}
+.gallery-grid img{display:block;width:100%;height:260px;object-fit:cover}
 .gallery-grid figcaption{padding:14px 17px;font-weight:900;color:#071a36}
-@media(max-width:850px){nav{display:none}.hero-grid,.quote-grid{grid-template-columns:1fr}.real-trucks{min-height:330px}.hero-photo.large{height:310px}.hero-photo.small{height:200px}.gallery-grid{grid-template-columns:1fr}.gallery-grid img{height:260px}.hero{padding-top:35px}.cards,.benefits,.trust-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:850px){nav{display:none}.hero-grid,.quote-grid{grid-template-columns:1fr}.real-trucks{min-height:330px}.hero-photo.large{height:310px}.hero-photo.small{height:200px}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-grid img{height:260px}.hero{padding-top:35px}.cards,.benefits,.trust-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:500px){.cards,.benefits,.trust-grid{grid-template-columns:1fr}section{padding:55px 0}h1{font-size:44px}.cta-row{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
@@ -97,8 +97,7 @@ footer{background:#040d1a;color:#aeb8c5;padding:28px 0;font-size:14px}.foot{disp
 </div>
 </div>
 <div class="hero-visual real-trucks">
-  <div class="hero-photo large"><img src="camion-azul-1.jpeg" alt="Camión de carga azul de la empresa"></div>
-  <div class="hero-photo small"><img src="camion-blanco-1.jpeg" alt="Camión blanco de la empresa"></div>
+  <div class="hero-photo large"><img src="flota-azul-carga-1.jpeg" alt="Camión azul JAC para transporte de carga"></div>
   <div class="photo-badge">🚚 Nuestra flota</div>
 </div>
 </div>
@@ -118,14 +117,15 @@ footer{background:#040d1a;color:#aeb8c5;padding:28px 0;font-size:14px}.foot{disp
 </div>
 </section>
 
+<style>.card{overflow:hidden}.card-photo{width:calc(100% + 48px);height:180px;margin:-24px -24px 18px;object-fit:cover;display:block}</style>
 <section id="servicios">
 <div class="container">
 <div class="head"><div class="eyebrow">Nuestros servicios</div><h2>Transporte para lo que necesitas</h2><p>Coordinamos el traslado según el tipo de carga, recorrido y servicio requerido.</p></div>
 <div class="cards">
-<div class="card"><div class="icon">🚛</div><h3>Transporte de carga</h3><p>Traslado de mercadería, materiales, equipos y diferentes tipos de carga.</p></div>
-<div class="card"><div class="icon">📦</div><h3>Fletes</h3><p>Servicio de transporte para cargas de distintos tamaños y recorridos.</p></div>
-<div class="card"><div class="icon">🏠</div><h3>Mudanzas</h3><p>Traslado de muebles, cajas, electrodomésticos y pertenencias.</p></div>
-<div class="card"><div class="icon">📍</div><h3>Lima y provincias</h3><p>Coordinamos servicios con origen o destino en Lima y provincias.</p></div>
+<div class="card"><img class="card-photo" src="flota-azul-carga-2.jpeg" alt="Camión azul para transporte de mercadería"><div class="icon">🚛</div><h3>Transporte de carga</h3><p>Traslado de mercadería, materiales, equipos y diferentes tipos de carga.</p></div>
+<div class="card"><img class="card-photo" src="flota-blanca-fletes.jpeg" alt="Camión blanco para fletes y carga"><div class="icon">📦</div><h3>Fletes</h3><p>Servicio de transporte para cargas de distintos tamaños y recorridos.</p></div>
+<div class="card"><img class="card-photo" src="flota-blanca-mudanzas-1.jpeg" alt="Camión blanco para servicio de mudanzas"><div class="icon">🏠</div><h3>Mudanzas</h3><p>Traslado de muebles, cajas, electrodomésticos y pertenencias.</p></div>
+<div class="card"><div class="icon">📍</div><h3>Lima y provincias</h3><p>Coordinamos servicios con origen o destino en Lima y diferentes provincias.</p></div>
 </div>
 </div>
 </section>
@@ -144,12 +144,10 @@ footer{background:#040d1a;color:#aeb8c5;padding:28px 0;font-size:14px}.foot{disp
 
 <section id="galeria" class="gallery-section">
 <div class="container">
-<div class="head"><div class="eyebrow">Nuestra flota</div><h2>Conoce nuestros camiones</h2><p>Mostramos parte de nuestra flota para que conozcas los vehículos que utilizamos en nuestros servicios.</p></div>
+<div class="head"><div class="eyebrow">Nuestra flota</div><h2>Conoce nuestros camiones</h2><p>Mostramos parte de nuestra flota y distribuimos las fotografías por el sitio para evitar repetir imágenes.</p></div>
 <div class="gallery-grid">
-  <figure><img src="camion-azul-1.jpeg" alt="Camión azul de transporte de carga"><figcaption>Camión de carga</figcaption></figure>
-  <figure><img src="camion-azul-2.jpeg" alt="Camión azul de transporte"><figcaption>Transporte de carga</figcaption></figure>
-  <figure><img src="camion-blanco-1.jpeg" alt="Camión blanco para mudanzas"><figcaption>Camión para mudanzas</figcaption></figure>
-  <figure><img src="camion-blanco-2.jpeg" alt="Camión blanco de carga"><figcaption>Servicio de carga y mudanza</figcaption></figure>
+  <figure><img src="flota-blanca-mudanzas-2.jpeg" alt="Camión blanco tipo furgón para mudanzas"><figcaption>Mudanzas y traslados</figcaption></figure>
+  <figure><img src="flota-azul-carga-3.jpeg" alt="Camión azul de mayor capacidad para transporte de carga"><figcaption>Transporte de carga</figcaption></figure>
 </div>
 </div>
 </section>
@@ -158,12 +156,12 @@ footer{background:#040d1a;color:#aeb8c5;padding:28px 0;font-size:14px}.foot{disp
 <div class="container quote-grid">
 <div class="info">
 <h3>Solicita tu cotización</h3>
-<p>Envíanos los datos básicos del servicio y te contactaremos por WhatsApp.</p>
+<p>Completa los datos básicos y elige si quieres enviar la solicitud por WhatsApp, mensaje o correo.</p>
 <p>📱 WhatsApp<br><a href="https://wa.me/51953466037" target="_blank">+51 953 466 037</a></p>
-<p style="margin-top:14px">📞 Llamadas<br><a href="tel:+51953466037">+51 953 466 037</a></p><p style="margin-top:14px">✉️ Correo<br><a href="mailto:transportedecargaymundanzas@gmail.com">transportedecargaymundanzas@gmail.com</a></p>
+<p style="margin-top:14px">📞 Llamadas<br><a href="tel:+51953466037">+51 953 466 037</a></p><p style="margin-top:14px">✉️ Correo<br><a href="mailto:Flores.19968@gmail.com">Flores.19968@gmail.com</a></p>
 </div>
 <div class="formbox">
-<form onsubmit="sendWhatsApp(event)">
+<form onsubmit="return false">
 <input id="name" placeholder="Nombre" required>
 <input id="from" placeholder="Lugar de recojo" required>
 <input id="to" placeholder="Lugar de entrega" required>
@@ -172,10 +170,16 @@ footer{background:#040d1a;color:#aeb8c5;padding:28px 0;font-size:14px}.foot{disp
 <option>Transporte de carga</option>
 <option>Flete</option>
 <option>Mudanza</option>
-<option>Otro</option>
+<option>Traslado de muebles o pertenencias</option>
+<option>Mercadería o materiales</option>
 </select>
 <textarea id="details" placeholder="Cuéntanos qué necesitas transportar"></textarea>
-<button class="btn red" type="submit">Enviar cotización por WhatsApp →</button>
+<div class="send-options">
+<button class="send-wa" type="button" onclick="sendQuote('whatsapp')">🟢 WhatsApp</button>
+<button class="send-sms" type="button" onclick="sendQuote('sms')">💬 Mensaje</button>
+<button class="send-email" type="button" onclick="sendQuote('email')">✉️ Correo</button>
+</div>
+<div class="send-note">Elige el medio por el que quieres enviar tu solicitud de cotización.</div>
 </form>
 </div>
 </div>
@@ -192,22 +196,27 @@ footer{background:#040d1a;color:#aeb8c5;padding:28px 0;font-size:14px}.foot{disp
 <footer>
 <div class="container foot">
 <div><b>Transporte de Carga y Mudanzas</b><br>Lima y Provincias</div>
-<div>WhatsApp: <b>+51 953 466 037</b><br>Correo: <b>transportedecargaymundanzas@gmail.com</b></div>
+<div>WhatsApp: <b>+51 953 466 037</b><br>Correo: <b>Flores.19968@gmail.com</b></div>
 </div>
 </footer>
 <a class="float" href="https://wa.me/51953466037?text=Hola,%20quiero%20cotizar%20un%20servicio." target="_blank">💬 WhatsApp</a>
 <a class="float" style="bottom:72px;background:#0b2b55" href="tel:+51953466037">📞 Llamar</a>
 
 <script>
-function sendWhatsApp(e){
- e.preventDefault();
- const name=document.getElementById('name').value;
- const from=document.getElementById('from').value;
- const to=document.getElementById('to').value;
+function getQuoteText(){
+ const name=document.getElementById('name').value.trim();
+ const from=document.getElementById('from').value.trim();
+ const to=document.getElementById('to').value.trim();
  const service=document.getElementById('service').value;
- const details=document.getElementById('details').value;
- const text=`Hola, quiero cotizar un servicio.%0A%0ANombre: ${encodeURIComponent(name)}%0ARecojo: ${encodeURIComponent(from)}%0AEntrega: ${encodeURIComponent(to)}%0AServicio: ${encodeURIComponent(service)}%0ADetalles: ${encodeURIComponent(details||'No especificado')}`;
- window.open('https://wa.me/51953466037?text='+text,'_blank');
+ const details=document.getElementById('details').value.trim();
+ if(!name||!from||!to||!service){ alert('Completa tu nombre, recojo, entrega y tipo de servicio.'); return null; }
+ return `Hola, quiero solicitar una cotización de transporte.%0A%0ANombre: ${encodeURIComponent(name)}%0ARecojo: ${encodeURIComponent(from)}%0AEntrega: ${encodeURIComponent(to)}%0AServicio: ${encodeURIComponent(service)}%0ADetalles: ${encodeURIComponent(details||'No especificado')}`;
+}
+function sendQuote(method){
+ const text=getQuoteText(); if(!text) return;
+ if(method==='whatsapp') window.open('https://wa.me/51953466037?text='+text,'_blank');
+ if(method==='sms') window.location.href='sms:+51953466037?body='+text;
+ if(method==='email'){ const subject=encodeURIComponent('Solicitud de cotización - Transporte de Carga y Mudanzas'); window.location.href='mailto:Flores.19968@gmail.com?subject='+subject+'&body='+text.replaceAll('%0A','%0D%0A'); }
 }
 </script>
 </body>
