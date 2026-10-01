@@ -37,12 +37,10 @@ h1 span{color:#f12a31}
 .hero .actions .whatsapp:hover{background:#1ebe5d;transform:translateY(-2px)}
 .outline:hover{background:#fff;color:#071a36}
 .hero-visual{background:#fff;border-radius:18px;padding:8px;box-shadow:0 25px 70px #0005}
-.real-trucks{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:10px;padding:10px}
-.hero-photo{overflow:hidden;border-radius:14px;box-shadow:0 10px 28px #0003}
-.hero-photo.large{height:410px}
-.hero-photo.small{height:250px;align-self:end}
+.real-trucks{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
+.hero-photo{height:205px;overflow:hidden;border-radius:14px;box-shadow:0 10px 28px #0003}
 .hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
-.photo-badge{position:absolute;left:24px;bottom:22px;background:#e21b23;color:#fff;padding:10px 16px;border-radius:999px;font-weight:900;box-shadow:0 5px 18px #0004}
+.photo-badge{position:absolute;left:24px;bottom:22px;background:#e21b23;color:#fff;padding:10px 16px;border-radius:999px;font-weight:900;box-shadow:0 5px 18px #0004;z-index:2}
 section{padding:72px 0}
 .head{text-align:center;margin-bottom:36px}
 .eyebrow{text-transform:uppercase;letter-spacing:1.5px;color:var(--red);font-size:12px;font-weight:900}
@@ -94,24 +92,8 @@ footer{background:#040d1a;color:#aeb8c5;padding:28px 0;font-size:14px}
 .foot b{color:#fff}
 .float{position:fixed;right:17px;bottom:17px;background:#25D366;color:#fff;padding:14px 17px;border-radius:999px;font-weight:900;box-shadow:0 8px 25px #0005;z-index:30}
 .float.call{bottom:72px;background:#0b2b55}
-@media(max-width:850px){
-nav{display:none}
-.hero-grid,.quote-grid{grid-template-columns:1fr}
-.real-trucks{min-height:330px}
-.hero-photo.large{height:310px}
-.hero-photo.small{height:200px}
-.gallery-grid{grid-template-columns:1fr}
-.gallery-grid img{height:260px}
-.hero{padding-top:35px}
-.cards,.benefits,.trust-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:500px){
-.cards,.benefits,.trust-grid{grid-template-columns:1fr}
-section{padding:55px 0}
-h1{font-size:44px}
-.cta-row{flex-direction:column;align-items:flex-start}
-.quote-actions{grid-template-columns:1fr}
-}
+@media(max-width:850px){nav{display:none}.hero-grid,.quote-grid{grid-template-columns:1fr}.real-trucks{min-height:0}.hero-photo{height:180px}.gallery-grid{grid-template-columns:1fr}.gallery-grid img{height:260px}.hero{padding-top:35px}.cards,.benefits,.trust-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.cards,.benefits,.trust-grid{grid-template-columns:1fr}section{padding:55px 0}h1{font-size:44px}.cta-row{flex-direction:column;align-items:flex-start}.quote-actions{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -121,7 +103,6 @@ h1{font-size:44px}
 <nav><a href="#servicios">Servicios</a><a href="#empresa">Empresa</a><a href="#galeria">Flota</a><a href="#cotiza">Cotiza</a></nav>
 </div>
 </header>
-
 <main>
 <section class="hero">
 <div class="container hero-grid">
@@ -136,13 +117,14 @@ h1{font-size:44px}
 </div>
 </div>
 <div class="hero-visual real-trucks">
-<div class="hero-photo large"><img src="flota-azul-carga-3.jpeg" alt="Camión azul de transporte de carga"></div>
-<div class="hero-photo small"><img src="flota-blanca-mudanzas-1.jpeg" alt="Camión blanco para mudanzas"></div>
+<div class="hero-photo"><img src="flota-azul-carga-3.jpeg" alt="Camión azul de transporte de carga"></div>
+<div class="hero-photo"><img src="flota-blanca-mudanzas-1.jpeg" alt="Camión blanco para mudanzas"></div>
+<div class="hero-photo"><img src="flota-camion-blanco-2.jpeg" alt="Camioncito blanco para fletes y carga"></div>
+<div class="hero-photo"><img src="flota-mudanzas-furgon-2.jpeg" alt="Camión blanco tipo furgón para mudanzas"></div>
 <div class="photo-badge">🚚 Nuestra flota</div>
 </div>
 </div>
 </section>
-
 <section class="trust">
 <div class="container">
 <div class="head"><div class="eyebrow">Nuestro compromiso</div><h2>Un servicio en el que puedes confiar</h2><p>Trabajamos para que tu carga llegue de forma organizada y con una atención clara desde la coordinación hasta la entrega.</p></div>
@@ -156,7 +138,6 @@ h1{font-size:44px}
 </div>
 </div>
 </section>
-
 <section id="servicios">
 <div class="container">
 <div class="head"><div class="eyebrow">Nuestros servicios</div><h2>Transporte para lo que necesitas</h2><p>Coordinamos el traslado según el tipo de carga, recorrido y servicio requerido.</p></div>
@@ -168,7 +149,6 @@ h1{font-size:44px}
 </div>
 </div>
 </section>
-
 <section class="dark" id="empresa">
 <div class="container">
 <div class="head"><div class="eyebrow">Nuestro servicio</div><h2>Coordinación clara y atención directa</h2><p>Cuéntanos qué necesitas transportar y coordinamos los detalles de tu servicio.</p></div>
@@ -180,19 +160,20 @@ h1{font-size:44px}
 </div>
 </div>
 </section>
-
 <section id="galeria" class="gallery-section">
 <div class="container">
 <div class="head"><div class="eyebrow">Nuestra flota</div><h2>Conoce nuestros camiones</h2><p>Vehículos reales de nuestra flota, organizados según el tipo de servicio.</p></div>
 <div class="gallery-grid">
 <figure><img src="flota-azul-carga-2.jpeg" alt="Camión azul para transporte de carga"><figcaption>Transporte de carga</figcaption></figure>
-<figure><img src="flota-azul-carga-3.jpeg" alt="Camión azul para servicio de carga"><figcaption>Carga y traslado</figcaption></figure>
-<figure><img src="flota-blanca-fletes.jpeg" alt="Camión blanco para fletes"><figcaption>Fletes</figcaption></figure>
+<figure><img src="flota-fletes-camioncito-azul.jpeg" alt="Camioncito blanco JAC con estructura azul para fletes"><figcaption>Fletes</figcaption></figure>
 <figure><img src="flota-blanca-mudanzas-2.jpeg" alt="Camión blanco para mudanzas"><figcaption>Mudanzas</figcaption></figure>
+<figure><img src="flota-camioncito-blanco-1.jpeg" alt="Camioncito blanco para carga y traslado"><figcaption>Carga y traslado</figcaption></figure>
+<figure><img src="flota-mudanzas-furgon.jpeg" alt="Camión blanco para mudanzas"><figcaption>Mudanzas</figcaption></figure>
+<figure><img src="flota-camion-blanco-2.jpeg" alt="Camioncito blanco para carga y fletes"><figcaption>Fletes y carga</figcaption></figure>
+<figure><img src="flota-mudanzas-furgon-2.jpeg" alt="Camión blanco tipo furgón para mudanzas"><figcaption>Mudanzas</figcaption></figure>
 </div>
 </div>
 </section>
-
 <section class="quote" id="cotiza">
 <div class="container quote-grid">
 <div class="info">
@@ -223,7 +204,6 @@ h1{font-size:44px}
 </div>
 </div>
 </section>
-
 <section class="cta">
 <div class="container cta-row">
 <div><h2>¿Necesitas transportar una carga?</h2><p>Hablemos y coordinemos tu servicio.</p></div>
@@ -231,7 +211,6 @@ h1{font-size:44px}
 </div>
 </section>
 </main>
-
 <footer>
 <div class="container foot">
 <div><b>Transporte de Carga y Mudanzas</b><br>Lima y Provincias</div>
@@ -240,7 +219,6 @@ h1{font-size:44px}
 </footer>
 <a class="float call" href="tel:+51953466037">📞 Llamar</a>
 <a class="float" href="https://wa.me/51953466037?text=Hola,%20quiero%20cotizar%20un%20servicio." target="_blank">💬 WhatsApp</a>
-
 <script>
 function prepareQuote(e){
  e.preventDefault();
