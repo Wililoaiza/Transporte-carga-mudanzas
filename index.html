@@ -126,6 +126,36 @@ footer{background:#040d1a;color:#aeb8c5;padding:28px 0;font-size:14px}
 </div>
 </div>
 </section>
+ <section class="quote" id="cotiza">
+<div class="container quote-grid">
+<div class="info">
+<h3>Solicita tu cotización</h3>
+<p>Indícanos los datos básicos del servicio y elige cómo quieres enviarnos tu solicitud.</p>
+<p>📱 WhatsApp<br><a href="https://wa.me/51953466037" target="_blank">+51 953 466 037</a></p>
+<p>📞 Llamadas<br><a href="tel:+51953466037">+51 953 466 037</a></p>
+<p>✉️ Correo<br><a href="mailto:Flores.19968@gmail.com">Flores.19968@gmail.com</a></p>
+</div>
+<div class="formbox">
+<form onsubmit="prepareQuote(event)">
+<input id="name" placeholder="Nombre" required>
+<input id="from" placeholder="Lugar de recojo" required>
+<input id="to" placeholder="Lugar de entrega" required>
+<select id="service" required>
+<option value="">Tipo de servicio</option>
+<option>Transporte de carga</option>
+<option>Flete</option>
+<option>Mudanza</option>
+</select>
+<textarea id="details" placeholder="Qué necesitas transportar, cantidad aproximada, fecha u otros detalles"></textarea>
+<div class="quote-actions">
+<a class="btn red" href="#" id="waQuote">WhatsApp</a>
+<a class="btn sms" href="#" id="smsQuote">SMS</a>
+<a class="btn email" href="#" id="emailQuote">Email</a>
+</div>
+</form>
+</div>
+</div>
+</section>
 <section class="trust">
 <div class="container">
 <div class="head"><div class="eyebrow">Nuestro compromiso</div><h2>Un servicio en el que puedes confiar</h2><p>Trabajamos para que tu carga llegue de forma organizada y con una atención clara desde la coordinación hasta la entrega.</p></div>
@@ -171,7 +201,7 @@ footer{background:#040d1a;color:#aeb8c5;padding:28px 0;font-size:14px}
 <figure><img src="flota-fletes-camioncito-azul.jpeg" alt="Camioncito blanco JAC con estructura azul para flete terrestre"><figcaption>Flete terrestre</figcaption></figure>
 </div>
 </div>
-</section>
+</section> 
 <section class="quote" id="cotiza">
 <div class="container quote-grid">
 <div class="info">
