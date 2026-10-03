@@ -157,9 +157,9 @@ footer{background:#040d1a;color:#aeb8c5;padding:28px 0;font-size:14px}
 </select>
 <textarea id="details" placeholder="Qué necesitas transportar, cantidad aproximada, fecha u otros detalles"></textarea>
 <div class="quote-actions">
-<a class="btn red" href="#" id="waQuote">WhatsApp</a>
-<a class="btn sms" href="sms:+51953466037">SMS</a>
-<a class="btn email" href="mailto:Flores.19968@gmail.com">Email</a>
+<a class="btn red" href="#" id="waQuote" onclick="sendQuote('whatsapp'); return false;">WhatsApp</a>
+<a class="btn sms" href="#" id="smsQuote" onclick="sendQuote('sms'); return false;">SMS</a>
+<a class="btn email" href="#" id="emailQuote" onclick="sendQuote('email'); return false;">Email</a>
 </div>
 </form>
 </div>
