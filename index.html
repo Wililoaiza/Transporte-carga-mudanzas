@@ -228,19 +228,63 @@ footer{background:#040d1a;color:#aeb8c5;padding:28px 0;font-size:14px}
 <a class="float call" href="tel:+51953466037">📞 Llamar</a>
 <a class="float" href="https://wa.me/51953466037?text=Hola,%20quiero%20cotizar%20un%20servicio." target="_blank">💬 WhatsApp</a>
 <script>
-function prepareQuote(e){
- e.preventDefault();
- const name=document.getElementById('name').value.trim();
- const from=document.getElementById('from').value.trim();
- const to=document.getElementById('to').value.trim();
- const service=document.getElementById('service').value;
- const details=document.getElementById('details').value.trim() || 'No especificado';
- const msg=`Hola, quiero cotizar un servicio.%0A%0ANombre: ${encodeURIComponent(name)}%0ARecojo: ${encodeURIComponent(from)}%0AEntrega: ${encodeURIComponent(to)}%0AServicio: ${encodeURIComponent(service)}%0ADetalles: ${encodeURIComponent(details)}`;
- document.getElementById('waQuote').href='https://wa.me/51953466037?text='+msg;
- document.getElementById('smsQuote').href='sms:+51953466037&body='+msg.replaceAll('%0A','%0D%0A');
- document.getElementById('emailQuote').href='mailto:Flores.19968@gmail.com?subject='+encodeURIComponent('Solicitud de cotización - '+service)+'&body='+decodeURIComponent(msg.replaceAll('%0A','%0D%0A'));
- window.open('https://wa.me/51953466037?text='+msg,'_blank');
+function sendQuote(type){
+
+  const name = document.getElementById('name').value.trim();
+  const from = document.getElementById('from').value.trim();
+  const to = document.getElementById('to').value.trim();
+  const service = document.getElementById('service').value;
+  const details = document.getElementById('details').value.trim() || 'No especificado';
+
+  if(!name || !from || !to || !service){
+    alert('Por favor completa los campos obligatorios.');
+    return;
+  }
+
+  const message =
+    'Hola, quiero cotizar un servicio.%0A%0A' +
+    'Nombre: ' + encodeURIComponent(name) + '%0A' +
+    'Lugar de recojo: ' + encodeURIComponent(from) + '%0A' +
+    'Lugar de entrega: ' + encodeURIComponent(to) + '%0A' +
+    'Tipo de servicio: ' + encodeURIComponent(service) + '%0A' +
+    'Detalles: ' + encodeURIComponent(details);
+
+  if(type === 'whatsapp'){
+    window.location.href =
+      'https://wa.me/51953466037?text=' + message;
+  }
+
+  if(type === 'sms'){
+    window.location.href =
+      'sms:+51953466037?body=' +
+      message.replaceAll('%0A','%0D%0A');
+  }
+
+  if(type === 'email'){
+    const subject =
+      encodeURIComponent('Solicitud de cotización - ' + service);
+
+    window.location.href =
+      'mailto:Flores.19968@gmail.com?subject=' +
+      subject +
+      '&body=' + message;
+  }
 }
+
+document.getElementById('waQuote').onclick = function(e){
+  e.preventDefault();
+  sendQuote('whatsapp');
+};
+
+document.getElementById('smsQuote').onclick = function(e){
+  e.preventDefault();
+  sendQuote('sms');
+};
+
+document.getElementById('emailQuote').onclick = function(e){
+  e.preventDefault();
+  sendQuote('email');
+};
 </script>
 </body>
 </html>
